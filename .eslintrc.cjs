@@ -14,7 +14,10 @@ const config = {
   ],
   "rules": {
     "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/no-unsafe-return": "warn",
+    "@typescript-eslint/no-unsafe-assignment": "warn",
     "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/no-floating-promises": "warn",
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       {

@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const LoaderOverlay = (props: Props) => {
+const LoaderOverlay = () => {
   return (
     <div className="absolute z-10 flex h-full w-full items-center justify-center bg-black bg-opacity-60">
       <div className="flex items-center">

@@ -21,7 +21,7 @@ export const fetchAssets = createAsyncThunk(
         asset: assetName,
       },
     });
-    return response.data.data;
+    return (response.data as { message: string; data: Asset[] }).data;
   },
 );
 
