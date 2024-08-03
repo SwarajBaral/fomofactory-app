@@ -86,4 +86,4 @@ export async function GET() {
 }
 
 // TODO: move this to cron
-setInterval(saveDataToDb, 10000);
+// setInterval(saveDataToDb, 10000);

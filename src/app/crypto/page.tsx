@@ -12,6 +12,12 @@ const AssetTable: React.FC = () => {
   const [selectedAsset, setSelectedAsset] = useState<string>("Bitcoin");
 
   useEffect(() => {
+    // Refresh BE every 10s
+    const pollInterval = setInterval(async () => {
+      console.log("Saving data to db...");
+      await fetch("/api/poll");
+    }, 10000);
+
     dispatch(fetchAssets(selectedAsset));
 
     // Poll every 20s
@@ -20,7 +26,10 @@ const AssetTable: React.FC = () => {
       dispatch(fetchAssets(selectedAsset));
     }, 20000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(pollInterval);
+      clearInterval(interval);
+    };
   }, [dispatch, selectedAsset]);
 
   useEffect(() => {
