@@ -90,9 +90,6 @@ export async function GET() {
         dbData.push(assetData);
       }
       await db.asset.createMany({ data: dbData });
-      return data;
-    }
-    if (data) {
       return NextResponse.json(
         { message: "Asset data saved" },
         { status: 200 },
