@@ -110,5 +110,7 @@ export async function GET() {
   }
 }
 
+export const revalidate = 0;
+
 // TODO: move this to cron
 // setInterval(saveDataToDb, 10000);
