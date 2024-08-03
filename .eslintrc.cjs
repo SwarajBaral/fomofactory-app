@@ -32,6 +32,7 @@ const config = {
       }
     ],
     "@typescript-eslint/require-await": "off",
+    "@typescript-eslint/restrict-template-expressions": "warn",
     "@typescript-eslint/no-misused-promises": [
       "warn",
       {
