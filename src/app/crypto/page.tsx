@@ -15,7 +15,7 @@ const AssetTable: React.FC = () => {
     // Refresh BE every 10s
     const pollInterval = setInterval(async () => {
       console.log("Saving data to db...");
-      await fetch("/api/poll");
+      await fetch("/api/poll", { cache: "no-store" });
     }, 10000);
 
     dispatch(fetchAssets(selectedAsset));
